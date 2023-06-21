@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Pet from "./Pet";
+
 const muffu = {
     name: 'Mufasa',
     type: 'Dog',
@@ -10,15 +14,6 @@ const brownie = {
     breed: 'toy poodle'
 }
 
-const Pet = (pet)=>{
-    return React.createElement(
-        "div",
-        {},
-        [React.createElement("h3",{},pet.name),
-        React.createElement("h5",{},pet.type),
-        React.createElement("h5",{},pet.breed)]
-    )
-}
 
 const App = () => {
     return React.createElement(
