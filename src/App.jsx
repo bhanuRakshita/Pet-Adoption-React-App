@@ -2,27 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Pet from "./Pet";
 
-const muffu = {
-    name: 'Mufasa',
-    type: 'Dog',
-    breed: 'Husky'
-}
-
-const brownie = {
-    name: 'Brownie',
-    type: 'Dog',
-    breed: 'toy poodle'
-}
-
-
 const App = () => {
-    return React.createElement(
-      "div",
-      {},[
-        React.createElement("h1",{},"Adopt Me!"),
-        React.createElement(Pet, muffu),
-        React.createElement(Pet, brownie)
-      ]
+    return (
+      <div>
+        <h1>"Adopt M!</h1>
+        <Pet name="Mufasa" type="Dog" breed="Husky"/>
+        <Pet name="Brownie" type="Dog" breed="Toy Poodle"/>
+      </div>      
     )
   };
 
