@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import SearchParams from './SearchParamas';
+import SearchParams from './SearchParams';
 
 const App = () => {
     return (
       <div>
-        <h1> Adopt M! </h1>
+        <h1> Adopt Mee! </h1>
         <SearchParams />
       </div>      
     )
