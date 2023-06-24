@@ -1,23 +1,22 @@
-//import React from "react";
-
-// const Pet = (pet)=>{
-//     return React.createElement(
-//         "div",
-//         {},
-//         [React.createElement("h3",{},pet.name),
-//         React.createElement("h5",{},pet.animal),
-//         React.createElement("h5",{},pet.breed)]
-//     )
-// };
-
-const Pet = (pet) => {
+const Pet = (props) => {
+    const { name, animal, breed, images, location, id } = props;
+  
+    let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
+    if (images.length) {
+      hero = images[0];
+    }
+  
     return (
-        <div>
-            <h1>{pet.name}</h1>
-            <h2>{pet.animal}</h2>
-            <h2>{pet.breed}</h2>
+      <a href={`/details/${id}`} className="pet">
+        <div className="image-container">
+          <img src={hero} alt={name} />
         </div>
+        <div className="info">
+          <h1>{name}</h1>
+          <h2>{`${animal} — ${breed} — ${location}`}</h2>
+        </div>
+      </a>
     );
-};
-
-export default Pet;
+  };
+  
+  export default Pet;
