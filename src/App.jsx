@@ -1,14 +1,23 @@
+import { Link, BrowserRouter, Routes, Route} from "react-router-dom"
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import SearchParams from './SearchParams';
+import Details from "./Details";
 
 const App = () => {
     return (
-      <div>
-        <h1> </h1> 
-        {/* H1 cotent will come from css */}
-        <SearchParams />
-      </div>      
+      <BrowserRouter>
+     
+        <header>
+          <Link to="/"></Link>  
+        </header> 
+        {/* H1/Header content will come from css */}
+        <Routes>
+          <Route path="/details/:id" element={<Details/>}/>
+          <Route path="/" element={<SearchParams/>}/>
+        </Routes>
+
+      </BrowserRouter>     
     )
   };
 
